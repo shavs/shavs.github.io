@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox examples</title>
+    <style>
+      /* Set some basic CSS to style the page*/
+
+      body {
+        width: 70%;
+        margin: 0 auto;
+        font-family: sans-serif;
+      }
+
+      header {
+        background: #AAAAAA;
+      }
+
+      footer {
+        background: #DDDDDD;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      h1, h2, h3 {
+        text-align: center;
+      }
+
+      /* Flexbox settings start here */
+
+      main {
+        background: #CCCCCC;
+        /*The Core CSS style here is "flex"*/
+        display: flex;
+      }
+
+      nav {
+        background: #BBBBBB;
+        /*
+
+        Because <main> now has the style attribute of "display: flex",
+        we can now either let Flex divide <main> by how many
+        elements are there (this means that both <nav> and
+        <section> would each take up 50% of the width of <main>),
+        or we can specify how much room they take up, by using
+        the "flex: /value/" style attribute.
+
+        In this case, we want the navigation to take up 1/5th of the
+        whole container.
+
+        */
+        flex: 1;
+      }
+
+      section {
+        /*
+
+        We want the main section to take up 4/5ths of <main>, as this is content we want to show.
+
+        */
+        flex: 4;
+      }
+
+      /*Flexbox CSS ends here.*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Heading</h1>
+    </header>
+    <main>
+      <nav>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h3>Main Section</h3>
+      </section>
+    </main>
+    <footer>
+      <h3>Footer</h3>
+    </footer>
+  </body>
+</html>

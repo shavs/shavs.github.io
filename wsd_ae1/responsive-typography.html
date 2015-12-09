@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Typograhpy Example</title>
+    <style>
+
+    body {
+      font-family: "Roboto", sans-serif;
+      /*background: #C5E1A5;*/
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    /*
+
+    All of the default browser CSS styles have been taken from the standard default browser style sheet.
+
+    When compiling the browser (using a tool for C like Cmake),
+    these CSS files can be changed. By default, all of the fonts are already in EMs, so nothing needs to be changed. However, to tell browsers that have not got a style sheet that defaults to EMs for font size, they have to be specified manually.
+
+    An example of this can be seen here:
+    https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+
+    Another example, from Mozilla using FireFox:
+    https://hg.mozilla.org/mozilla-central/file/tip/layout/style/html.css
+
+    */
+
+    h1 {
+      /*Default Browser CSS size is 2em */
+      font-size: 2em;
+    }
+
+    h2 {
+      /*Default Browser CSS size is 1.5em*/
+      font-size: 1.5em;
+    }
+
+    h3 {
+      /*Default Browser CSS size is 1.17em*/
+      font-size: 1.17em;
+    }
+
+    h4 {
+      /* Usually at the default font size */
+      font-size: 1em;
+    }
+
+    h5 {
+      /* Default Browser CSS size is 0.83em */
+      font-size: 0.83em;
+    }
+
+    h6 {
+      /* Default Browser CSS size is 0.67em */
+      font-size: 0.67em;
+    }
+
+    p {
+      /* Default Browser CSS size is 1em; */
+      font-size: 1em;
+    }
+
+    /*
+
+    With Media Queries however, this can change depending on the
+    resolution the browser is working at.
+
+    The following examples will assume the breakpoints
+    of 810px and 600px
+
+    */
+
+    @media (max-width: 810px) {
+
+      body {
+        background: #FFE082;
+      }
+
+      /*
+
+      In this media query, we are going to make the
+      fonts 0.5em larger
+
+      */
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.67em;
+      }
+
+      h4 {
+        font-size: 1.5em;
+      }
+
+      h5 {
+        font-size: 1.33em;
+      }
+
+      h6 {
+        font-size: 1.17em;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        background: #90CAF9;
+      }
+
+      /*
+
+      At this breakpoint, the font will increase by
+      another 0.5ems
+
+      */
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      h3 {
+        font-size: 2.17em;
+      }
+
+      h4 {
+        font-size: 2em;
+      }
+
+      h5 {
+        font-size: 1.83em;
+      }
+
+      h6 {
+        font-size: 1.67em;
+      }
+
+      p {
+        font-size: 2em;
+      }
+    }
+
+    /* End of stylesheet */
+
+    </style>
+
+  </head>
+  <body>
+    <!-- Different heading sizes in HTML markup -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <!-- Note - the "odd gap" that appears here is in
+    all browsers, not just Chrome-->
+    <h6>Heading 6</h6>
+
+    <p>Paragraph text:</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <table>
+      <tr>
+        <th>
+          Resolution of Media Query
+        </th>
+        <th>
+          Background Color of Media Query
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Normal
+        </td>
+        <td>
+          Light Green, #C5E1A5
+        </td>
+      </tr>
+      <tr>
+        <td>
+          800px
+        </td>
+        <td>
+          Amber, #FFE082
+        </td>
+      </tr>
+      <tr>
+        <td>
+          600px
+        </td>
+        <td>
+          Blue, #90CAF9
+        </td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>

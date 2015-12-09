@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Picture element example</title>
+  </head>
+  <body>
+    <h1>Picture element example</h1>
+    <p>
+      The image below will be a duck at anything larger than 800px, some balloons between 800px and 701px, and a dog at 600px or less.
+    </p>
+    <p>
+      Although I am changing the image, I am using these examples as a visual demonstration. In a production environment, it should be used for hero images and be the same image throughout the breakpoints.
+    </p>
+
+    <picture>
+      <!-- Breakpoint at 800px -->
+      <source media="(min-width: 800px)" srcset="images/duck.jpg" />
+      <!-- Breakpoint at 700px -->
+      <source media="(min-width: 700px)" srcset="images/balloons.jpg" />
+      <!-- Breakpoint at 600px -->
+      <source media="(min-width: 600px)" srcset="images/dog.jpg" />
+      <!-- Image fallback, can use srcset within all of these image references -->
+      <img src="images/duck.jpg" alt="A picture of a duck" />
+    </picture>
+
+  </body>
+</html>
