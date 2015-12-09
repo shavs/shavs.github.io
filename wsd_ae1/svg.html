@@ -5,12 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Responsive SVG Example</title>
   </head>
-  <body>
-    <!-- The SVG will be placed inside of a container, scaled usign media queries -->
+  <style>
+    body {
+      margin: 1em auto;
+      background: #DDDDDD;
+      width: 100%;
+      font-family: sans-serif;
+    }
 
-    <p>
-      <img src="images/image_placeholder.svg" alt="Scalable Image" />
-    </p>
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    #img100 {
+      width: 100%;
+    }
+
+    #img10 {
+      width: 10%;
+    }
+
+    #img1 {
+      width: 1%;
+    }
+
+
+  </style>
+  <body>
+<!--
+    Generally speaking, because of inlining the SVG, the browser does not need to make another request and therefore is more performant to inline images into them.
+
+    However, they should not be used for "traditional" images. This is because SVGs are plots on a canvas, and it is difficult to recreate one using SVG technology. However, it is a good substitue for icons, as it massively reduces the bandwidth needed.
+   -->
+    <div id="div100">
+      <p>The image used at 100% of the page size</p>
+      <!-- The images can be inlined, like so: -->
+      <svg xmlns="http://www.w3.org/2000/svg" id="img100" width="256" height="256" viewBox="0 0 256 256">
+        <path fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="1.25" stroke-miterlimit="0" d="M.50662333.48876h254.99944v254.99945H.50662333z"/>
+        <path d="M1.3297253.44213854L254.75956 255.55786H1.3297253L254.75956.44213854z" fill="none" stroke="#000" stroke-linejoin="bevel"/>
+      </svg>
+    </div>
+
+    <div id="div10">
+      <p>The image used at 10% of the page size</p>
+      <img id="img10" src="images/image_placeholder.svg" alt="Scalable Image" />
+    </div>
+
+    <div id="div1">
+      <p>The image used at 1% of the page size</p>
+      <img id="img1" src="images/image_placeholder.svg" alt="Scalable Image" />
+    </div>
+
+    <p>Shrinking the containers will constrain them, but styles need to be applied directly to the <code>img</code> element.</p>
 
   </body>
 </html>
