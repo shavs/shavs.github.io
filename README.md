@@ -1,5 +1,5 @@
 # Stephen Shave's Public Website and Code Repo
 
-This is a public code repository demonstrating core examples of techologies and theories.
+This is a public code repository demonstrating core examples of technologies and theories.
 
-It is open-source - provided that someone has met with me in person, I will allow people to make pull requests.
+If someone has met with me in person and discussed the matter, I will allow them to make pull requests to correct suggested edits.
