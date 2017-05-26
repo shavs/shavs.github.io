@@ -7,7 +7,7 @@ categories: bash terminal guide
 
 ## Introduction and Issue
 
-On my laptop, I've experimented with replacing [Oh My Zsh]() with [Bash](), and a heavily customised environment.
+On my laptop, I've experimented with replacing [Oh My Zsh](http://ohmyz.sh/) with [Bash](https://tiswww.case.edu/php/chet/bash/bashtop.html), and a heavily customised environment.
 
 During this experimentation, I've noticed that using `$HOME`, e.g.:
 
@@ -18,6 +18,7 @@ $ cd $HOME/Documents/
 ``` 
 
 That it would escape the variable instead, rather than expanding the variable or simply using the variable as-is.
+
 For example:
 
 ```bash
